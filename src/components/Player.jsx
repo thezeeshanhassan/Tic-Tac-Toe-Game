@@ -19,7 +19,7 @@ export default function Player({ name, symbol }) {
           {isEditing == false && <span className="player-name">{playerName}</span>}
           {isEditing == true && (
             <input
-              placeholder={name}
+              defaultValue={name}
               value={playerName}
               className="player-name"
               onChange={handleChange}
