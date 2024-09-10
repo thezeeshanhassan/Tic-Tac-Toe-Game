@@ -3,6 +3,7 @@ import Player from "./components/Player";
 import GameBoard from "./components/GameBoard";
 import Log from "./components/Log";
 import { WINNING_COMBINATIONS } from "./winning_combinations";
+import GameOver from "./components/GameOver";
 
 const initialGameBoard = [
   [null, null, null],
@@ -30,13 +31,15 @@ function App() {
     const { row, col } = square;
 
     gameBoard[row][col] = player;
+    
   }
+  
   let winner = null;
   for (const combination of WINNING_COMBINATIONS) {
-    const firstSquareSymbol = gameBoard[combination[0].row][combination[0].col];
+    const firstSquareSymbol = gameBoard[combination[0].row][combination[0].column];
     const secondSquareSymbol =
-      gameBoard[combination[1].row][combination[1].col];
-    const thirdSquareSymbol = gameBoard[combination[2].row][combination[2].col];
+      gameBoard[combination[1].row][combination[1].column];
+    const thirdSquareSymbol = gameBoard[combination[2].row][combination[2].column];
 
     if (
       firstSquareSymbol &&
@@ -59,7 +62,6 @@ function App() {
       return updatedTurns;
     });
   }
-  console.log(winner);
 
   return (
     <main>
