@@ -1,20 +1,20 @@
 // import { useState } from "react";
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
+// const initialGameBoard = [
+//   [null, null, null],
+//   [null, null, null],
+//   [null, null, null],
+// ];
 
-export default function GameBoard({ onSelectSquare, turns }) {
-  let gameBoard = initialGameBoard;
+export default function GameBoard({ onSelectSquare, gameBoard }) {
+  // let gameBoard = initialGameBoard;
 
-  for (const turn of turns) {
-    const { square, player } = turn;
-    const { row, col } = square;
+  // for (const turn of turns) {
+  //   const { square, player } = turn;
+  //   const { row, col } = square;
 
-    gameBoard[row][col] = player;
-  }
+  //   gameBoard[row][col] = player;
+  // }
   // const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
   // function handleSelect(rowIdx, colIdx) {
